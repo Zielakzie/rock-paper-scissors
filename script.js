@@ -26,7 +26,7 @@ function game() {
         } else if (playerChoise === 'Rock' && computerChoice === 'Paper' || playerChoise === 'Scissors' && computerChoice === 'Rock' || playerChoise === 'Paper' && computerChoice === 'Scissors') {
             gameResult = 'You lose, one more round?'
         } else {
-            gameResult = "It's seems like you are trying to cheat ;) Chose your weapon!"
+            gameResult = "It seems like you are trying to cheat ;) Chose your weapon!"
         }
 
         document.getElementById('result').innerHTML = `Computer choice ${computerChoice}<br /><strong>${gameResult}</strong>`
