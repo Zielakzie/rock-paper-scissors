@@ -16,6 +16,7 @@ function playerTurn() {
 
 
 function game(){
+    document.getElementById('result').innerHTML = ''
     playerTurn();
     computerTurn();
 
