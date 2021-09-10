@@ -16,6 +16,7 @@ body {
 
 #playerChoice {
     padding: 5px;
+    max-width: 500px;
 }
 
 button {
