@@ -1,5 +1,6 @@
 const array = ['Rock', 'Paper', 'Scissors']
 let playerChoise, computerChoice, gameResult = ""
+const result = document.getElementById('result')
 
 function computerTurn() {
     const n = Math.floor(Math.random() * array.length)
@@ -8,13 +9,13 @@ function computerTurn() {
 
 function playerTurn() {
     playerChoise = document.getElementById('playerChoice').value
-    document.getElementById('result').innerHTML = ''
+    result.innerHTML = ''
 }
 
 
 
 function game() {
-    document.getElementById('result').innerHTML = ''
+    result.innerHTML = ''
     playerTurn();
     computerTurn();
 
@@ -29,7 +30,7 @@ function game() {
             gameResult = "It seems like you are trying to cheat ;) Chose your weapon!"
         }
 
-        document.getElementById('result').innerHTML = `Computer choice ${computerChoice}<br /><strong>${gameResult}</strong>`
+        result.innerHTML = `Computer choice ${computerChoice}<br /><strong>${gameResult}</strong>`
     }, 100);
 
 
