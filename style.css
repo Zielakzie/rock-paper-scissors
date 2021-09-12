@@ -6,6 +6,24 @@ body {
     margin: auto;
 }
 
+select {
+    margin: 2px;
+}
+
+p {
+    max-width: 500px;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(60, 194, 176);
+    color: white;
+    border: solid 1px rgb(60, 194, 176);
+    padding: 6px 20px;
+    margin: 2px;
+    font-weight: bold;
+   }
+
 .col {
     display: flex;
     flex-direction: column;
@@ -24,26 +42,9 @@ body {
     align-items: center;
 }
 
-#playerChoice {
-    padding: 5px;
-}
-
-button {
- background-color: rgb(60, 194, 176);
- color: white;
- border: solid 1px rgb(60, 194, 176);
- padding: 6px 20px;
- margin: 2px;
- font-weight: bold;
-}
-
-select {
-    margin: 2px;
-}
-
-p {
-    max-width: 500px;
-    text-align: center;
+.margin-clear {
+    margin: 0;
+    padding: 10px;
 }
 
 .score-board-border {
@@ -56,15 +57,18 @@ p {
     font-size: 3rem;
 }
 
-.margin-clear {
-    margin: 0;
-    padding: 10px;
-}
-
 .red {
    color: rgb(194, 60, 60);
 }
 
 .green {
     color: rgb(60, 194, 176);
+}
+
+#playerChoice {
+    padding: 5px;
+}
+
+#score-board {
+    display: none;
 }

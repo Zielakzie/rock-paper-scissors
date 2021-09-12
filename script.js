@@ -23,7 +23,6 @@ function playerTurn() {
 let computerPoints = 0;
 let playerPoints = 0;
 
-// FIXME:
 function clearPoints() {
     playerPoints = 0
     computerPoints = 0
@@ -34,7 +33,8 @@ function clearPoints() {
 }
 
 function game() {
-
+    document.getElementById("welcome").style = 'display: none;'
+    document.getElementById("score-board").style = 'display: flex;'
     result.innerHTML = ''
     gameResult.innerHTML = ''
 
