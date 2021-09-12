@@ -20,6 +20,7 @@ function playerTurn() {
 let computerPoints = 0;
 let playerPoints = 0;
 
+
 function game() {
 
     result.innerHTML = ''
@@ -30,7 +31,6 @@ function game() {
 
 
     setTimeout(function () {
-
 
 
         if (playerChoise === computerChoice) {
