@@ -64,7 +64,7 @@ function game() {
             scoreBoardComputerPoints.innerHTML = `${computerPoints}`
 
             if (computerPoints === 3) {
-                gameResult = `<span class="red">You lose</span>, one more Try?<br /> with ${computerPoints} : ${playerPoints}`
+                gameResult = `<span class="red">You lose</span><br /> with ${computerPoints} : ${playerPoints}<br /> one more Try?`
                 clearPoints()
 
             }
