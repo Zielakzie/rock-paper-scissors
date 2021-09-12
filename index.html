@@ -1,26 +1,39 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="col">
-    <div class="row">
-        <select name="playerChoice" id="playerChoice" onchange="playerTurn()">
-            <option selected disabled hidden>Chose your weapon</option>
-            <option value="Rock">Rock</option>
-            <option value="Paper">Paper</option>
-            <option value="Scissors">Scissors</option>
-        </select>
-        <button onclick="game()">Play</button>
-    </div>
-    <p id="result"></p>
-    <p id="score"></p>
 
-</div>
+<body>
+    <div class="col center">
+        <div class="row center">
+            <select name="playerChoice" id="playerChoice" onchange="playerTurn()">
+                <option selected disabled hidden>Chose your weapon</option>
+                <option value="Rock">Rock</option>
+                <option value="Paper">Paper</option>
+                <option value="Scissors">Scissors</option>
+            </select>
+            <button onclick="game()">Play</button>
+        </div>
+        <p id="result"></p>
+        <p id="score"></p>
+        <div class="row">
+            <div class="col score-board-border">
+                <p id="player-points" class="points">0</p>
+                <p>Player</p>
+            </div>
+            <div class="col center margin-clear">:</div>
+            <div class="col score-board-border">
+                <p id="computer-points" class="points">0</p>
+                <p>Computer</p>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>

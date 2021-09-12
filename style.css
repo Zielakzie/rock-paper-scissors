@@ -9,16 +9,19 @@ body {
 .col {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin: 20px;
     padding: 20px;
     max-width: 100%;
 }
 
 .row {
+    display: flex;
     flex-direction: row;
+}
+
+.center {
     justify-content: center;
+    align-items: center;
 }
 
 #playerChoice {
@@ -36,4 +39,26 @@ button {
 p {
     max-width: 500px;
     text-align: center;
+}
+
+.score-board-border {
+    border: solid 1px #e7e7e7;
+    width: 120px;
+    height: 120px;
+}
+
+.points {
+    font-size: 3rem;
+}
+
+.margin-clear {
+    margin: 0;
+}
+
+.red {
+   color: rgb(194, 60, 60);
+}
+
+.green {
+    color: rgb(60, 194, 176);
 }

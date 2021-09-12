@@ -4,6 +4,9 @@ let computerChoice = ""
 let gameResult = ""
 const result = document.getElementById('result')
 const score = document.getElementById('score')
+const scoreBoardPlayerPoints = document.getElementById('player-points')
+const scoreBoardComputerPoints = document.getElementById('computer-points')
+
 
 
 
@@ -20,6 +23,15 @@ function playerTurn() {
 let computerPoints = 0;
 let playerPoints = 0;
 
+// FIXME:
+function clearPoints() {
+    playerPoints = 0
+    computerPoints = 0
+    scoreBoardPlayerPoints.innerHTML = `${playerPoints}`
+    scoreBoardComputerPoints.innerHTML = `${computerPoints}`
+
+
+}
 
 function game() {
 
@@ -35,27 +47,26 @@ function game() {
 
         if (playerChoise === computerChoice) {
             gameResult = 'Draw'
-            score.innerHTML = `Player: ${playerPoints} Computer: ${computerPoints}`
 
         } else if (playerChoise === 'Paper' && computerChoice === 'Rock' || playerChoise === 'Rock' && computerChoice === 'Scissors' || playerChoise === 'Scissors' && computerChoice === 'Paper') {
             playerPoints++;
             gameResult = 'Point for Player'
-            score.innerHTML = `Player: ${playerPoints} Computer: ${computerPoints}`
+            scoreBoardPlayerPoints.innerHTML = `${playerPoints}`
             if (playerPoints === 3) {
-                gameResult = 'Player Won GG! :)'
-                playerPoints = 0
-                computerPoints = 0
+                gameResult = `<span class="green">Player Won GG! :)</span><br /> with ${playerPoints} : ${computerPoints}`
+                clearPoints()
+
             }
 
         } else if (playerChoise === 'Rock' && computerChoice === 'Paper' || playerChoise === 'Scissors' && computerChoice === 'Rock' || playerChoise === 'Paper' && computerChoice === 'Scissors') {
             computerPoints++;
             gameResult = 'Point for Computer'
-            score.innerHTML = `Player: ${playerPoints} Computer: ${computerPoints}`
+            scoreBoardComputerPoints.innerHTML = `${computerPoints}`
 
             if (computerPoints === 3) {
-                gameResult = 'You lose, one more Try?'
-                playerPoints = 0
-                computerPoints = 0
+                gameResult = `<span class="red">You lose</span>, one more Try?<br /> with ${computerPoints} : ${playerPoints}`
+                clearPoints()
+
             }
 
         } else {
