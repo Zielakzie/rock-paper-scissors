@@ -53,6 +53,7 @@ p {
 
 .margin-clear {
     margin: 0;
+    padding: 10px;
 }
 
 .red {
