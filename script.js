@@ -48,7 +48,7 @@ function game() {
         if (playerChoise === computerChoice) {
             gameResult = 'Draw'
 
-        } else if (playerChoise === 'Paper' && computerChoice === 'Rock' || playerChoise === 'Rock' && computerChoice === 'Scissors' || playerChoise === 'Scissors' && computerChoice === 'Paper') {
+        } else if (playerChoise === 'paper' && computerChoice === 'rock' || playerChoise === 'rock' && computerChoice === 'scissors' || playerChoise === 'scissors' && computerChoice === 'paper') {
             playerPoints++;
             gameResult = 'Point for Player'
             scoreBoardPlayerPoints.innerHTML = `${playerPoints}`
@@ -58,7 +58,7 @@ function game() {
 
             }
 
-        } else if (playerChoise === 'Rock' && computerChoice === 'Paper' || playerChoise === 'Scissors' && computerChoice === 'Rock' || playerChoise === 'Paper' && computerChoice === 'Scissors') {
+        } else if (playerChoise === 'rock' && computerChoice === 'paper' || playerChoise === 'scissors' && computerChoice === 'rock' || playerChoise === 'paper' && computerChoice === 'scissors') {
             computerPoints++;
             gameResult = 'Computer scored a point'
             scoreBoardComputerPoints.innerHTML = `${computerPoints}`
