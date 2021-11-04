@@ -1,4 +1,4 @@
-const array = ['Rock', 'Paper', 'Scissors']
+const array = ['rock', 'paper', 'scissors']
 let playerChoise = ""
 let computerChoice = ""
 let gameResult = ""
@@ -60,7 +60,7 @@ function game() {
 
         } else if (playerChoise === 'Rock' && computerChoice === 'Paper' || playerChoise === 'Scissors' && computerChoice === 'Rock' || playerChoise === 'Paper' && computerChoice === 'Scissors') {
             computerPoints++;
-            gameResult = 'Point for Computer'
+            gameResult = 'Computer scored a point'
             scoreBoardComputerPoints.innerHTML = `${computerPoints}`
 
             if (computerPoints === 3) {
@@ -70,10 +70,10 @@ function game() {
             }
 
         } else {
-            gameResult = "It seems like you are trying to cheat ;) Chose your weapon!"
+            gameResult = "It seems like you are trying to cheat ;) Choose your weapon!"
         }
 
-        result.innerHTML = `Computer choice ${computerChoice}<br /><strong>${gameResult}</strong><br />`;
+        result.innerHTML = `Computer chose ${computerChoice}<br /><strong>${gameResult}</strong><br />`;
     }
         , 100);
 }

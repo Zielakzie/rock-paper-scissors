@@ -3,18 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Rock, Paper, Scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="col center">
-        <p id="welcome">Welcome to the Rock, Paper, Scissors game! Choose your weapon and challenge computer, first
-            player with 3
-            points win the game. Good luck!</p>
+        <p id="welcome">Welcome to the Rock, Paper, Scissors game! Choose your weapon and challenge the computer. First
+            player to score 3 points wins the game. Good luck!</p>
         <div class="row center">
-            <select name="playerChoice" id="playerChoice" onchange="playerTurn()">
+            <select title="playerChoice" name="playerChoice" id="playerChoice" onchange="playerTurn()">
                 <option selected disabled hidden>Chose your weapon</option>
                 <option value="Rock">Rock</option>
                 <option value="Paper">Paper</option>
